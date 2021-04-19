@@ -33,6 +33,7 @@ layout: default
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}{{ category_string }}
           </a>
+          {% assign category_string = "" %}
         </h3>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
