@@ -34,6 +34,7 @@ layout: default
                 {% else %}
                     {% capture category_string %}{{ category_string }}, {{ category }}{% endcapture %}
                 {% endif %}
+            {% endfor %}
           {% endif %}
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}{{ category_string }}
