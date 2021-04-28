@@ -28,7 +28,12 @@ layout: default
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
           {% if post.categories.size > 0 %}
-            {% capture category_string %} | {{ post.categories[0] }}{% endcapture %}
+            {% for category in post.categories %}
+                {% if category == post.categories[0] %}
+                    {% capture category_string %} | {{ category }}{% endcapture %}
+                {% else %}
+                    {% capture category_string %}{{ category_string }}, {{ category }}{% endcapture %}
+                {% endif %}
           {% endif %}
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}{{ category_string }}
