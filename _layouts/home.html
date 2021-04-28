@@ -32,7 +32,7 @@ layout: default
                 {% if category == post.categories[0] %}
                     {% capture category_string %} | {{ category }}{% endcapture %}
                 {% else %}
-                    {% capture category_string %}{{ category_string }}, {{ category }}{% endcapture %}
+                    {% capture category_string %}{{ category_string }} | {{ category }}{% endcapture %}
                 {% endif %}
             {% endfor %}
           {% endif %}
