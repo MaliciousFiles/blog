@@ -24,27 +24,29 @@ layout: default
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          {% if post.categories.size > 0 %}
-            {% for category in post.categories %}
-                {% if category == post.categories[0] %}
-                    {% capture category_string %} | {{ category }}{% endcapture %}
-                {% else %}
-                    {% capture category_string %}{{ category_string }} | {{ category }}{% endcapture %}
-                {% endif %}
-            {% endfor %}
-          {% endif %}
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}{{ category_string }}
-          </a>
-          {% assign category_string = "" %}
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
+        if {% post.in_index | default: true %}
+          <li>
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h3>
+              {% if post.categories.size > 0 %}
+                {% for category in post.categories %}
+                    {% if category == post.categories[0] %}
+                        {% capture category_string %} | {{ category }}{% endcapture %}
+                    {% else %}
+                        {% capture category_string %}{{ category_string }} | {{ category }}{% endcapture %}
+                    {% endif %}
+                {% endfor %}
+              {% endif %}
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}{{ category_string }}
+              </a>
+              {% assign category_string = "" %}
+            </h3>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </li>
+        {% endif %}
       {%- endfor -%}
     </ul>
 

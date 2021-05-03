@@ -1,8 +1,8 @@
 ---
-layout: post
-title: "The Start of 13Q"
+layout: redirect
 date: "2021-04-19 07:51:49 -0500"
-categories: "13Q"
+in_index: false
+redirect_url: '13q.org'
 ---
 Hello, and welcome back! Recently a classmate reached out because he saw a project on my GitHub, and asked me if I would help him on his project. I know that I talked about working on Aviar last time, but I am now going to help develop a Minecraft plugin for managing a server. The name of the server is 13Q and it's still in development, but the website is at [13Q].
 
