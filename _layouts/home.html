@@ -24,7 +24,7 @@ layout: default
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
-        <span class="post-meta">{{ pos.remove_from_list | default: false }}</span>
+        <span class="post-meta">{{ post.remove_from_list | default: false }}</span>
         {% if !(post.remove_from_list | default: false) %}
           <li>
             <span class="post-meta">{{ post.date | date: date_format }}</span>
