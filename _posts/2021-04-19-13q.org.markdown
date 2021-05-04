@@ -1,5 +1,0 @@
----
-layout: redirect
-date: "2021-04-19 07:51:49 -0500"
-redirect_url: '13q.org'
----
