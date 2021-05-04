@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "First Post!"
+in_index: true
 date: "2021-04-07 10:53:30 -0500"
 ---
 Hello to anyone who is reading this! I am excited to say that I finally finished creating my blog, though it did take a few hours. If you couldn't already tell I am using Jekyll + GitHub Pages to help create it! I think I'm just going to start off by saying what I'm currently working on, but I also have a lot of previous projects on GitHub if you'd like to check them out.
