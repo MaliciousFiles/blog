@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "First Week Working on 13Q"
+title: "First Week Working On 13Q"
 date: "2021-04-28 07:56:52 -0500"
 categories: "13Q Java Minecraft Plugin"
 ---

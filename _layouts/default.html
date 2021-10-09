@@ -37,7 +37,6 @@
           <hr>
           <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
         </div>
-
         {{ content }}
       </section>
 
@@ -53,5 +52,23 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
-  </body>
+    </body>
+    <footer>
+        <div class="newsletter-container">
+           <h4 class="newsletter-title">Subscribe</h4>
+           <form class="newsletter-form" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="var win=window.open('https://feedburner.google.com/fb/a/mailverify?uri=MaliciousFiles', 'popupwindow', 'scrollbars=yes,width=550,height=520');var timer=setInterval(function(){if (win.closed){clearInterval(timer);document.getElementsByClassName('newsletter-email')[0].value='';}},1000);return true">
+
+               <p class="newsletter-text">Get new posts directly to your inbox</p>
+
+               <input type="hidden" value="MaliciousFiles" name="uri" />
+
+               <input type="hidden" name="loc" value="en_US" />
+
+               <input class="newsletter-email" type="text" name="email" placeholder="name@example.com" />
+
+               <input class="newsletter-submit" type="submit" value="Subscribe" />
+
+           </form>
+       </div>
+   </footer>
 </html>

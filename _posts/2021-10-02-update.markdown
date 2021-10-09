@@ -2,6 +2,7 @@
 layout: post
 title: "Update"
 date: "2021-10-02 10:27:33 -0500"
+categories: "BTD6"
 ---
 
 Ok so... it's been a while. Now I know I said this last time, but I'm going to start posting every Saturday for real. So anyway, I'm going to mainly just update you on my coding recently! I've taken a break from Artifact, but I will get back to it eventually. I have quite a bit to get around to after I'm done with my current project.
