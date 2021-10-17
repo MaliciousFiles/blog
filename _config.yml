@@ -18,11 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Coding Blog
+title: CodingCloud
 email: mtroalson@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A blog that I will write in periodically to document my projects.
-  I'll post when I finish projects, or just if something of note happens.
+  A blog that I will write in weekly to document my projects.
+  I'll post updates about projects, or just anything of note in my programming.
   I may occasionally put tutorials as well if I feel it would be useful.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://maliciousfiles.github.io" # the base hostname & protocol for your site, e.g. http://example.com
