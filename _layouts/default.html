@@ -33,6 +33,8 @@
         <nav style="float: right; margin-top: 1.5px">
             {%- if page.previous -%}
                 <li class="fork"><a href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">≪ Previous Post</a></li>
+            {%- endif -%}
+            {%- if page.previous and page.next -%}
                 <li class="fork">|●|</li>
             {%- endif -%}
             {%- if page.next -%}
