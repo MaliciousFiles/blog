@@ -30,18 +30,14 @@
             <li class="fork">|●|</li>
             <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
         </nav>
-        <nav style="float: right; margin-top: 1.5px">
+        <nav style="float: right; margin-top: 0px">
             {%- if page.previous -%}
                 <li class="fork"><a href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">≪ Previous Post</a></li>
-<<<<<<< HEAD
             {%- endif -%}
             {%- if page.previous and page.next -%}
                 <li class="fork">|●|</li>
-=======
->>>>>>> 4600026cad6ceda4eda83fbb1a86a1f99af843c3
             {%- endif -%}
             {%- if page.next -%}
-                <li class="fork">|●|</li>
                 <li class="fork"><a href="{{ page.next.url | relative_url }}" title = "{{ page.next.title }}">Next Post ≫</a></li>
             {%- endif -%}
         </nav>
