@@ -30,6 +30,15 @@
             <li class="fork">|●|</li>
             <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
         </nav>
+        <nav style="float: right; margin-top: 1.5px">
+            {%- if page.previous -%}
+                <li class="fork"><a href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">≪ Previous Post</a></li>
+                <li class="fork">|●|</li>
+            {%- endif -%}
+            {%- if page.next -%}
+                <li class="fork"><a href="{{ page.next.url | relative_url }}" title = "{{ page.next.title }}">Next Post ≫</a></li>
+            {%- endif -%}
+        </nav>
       </div><!-- end header -->
 
     <div class="wrapper">
@@ -42,6 +51,13 @@
           <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
         </div>
         {{ content }}
+        <br>
+        {%- if page.previous -%}
+            <li class="fork" style="float: left; list-style: none; display: inline"><a href="{{ page.previous.url | relative_url }}" title="Previous Post">≪ {{ page.previous.title }}</a></li>
+        {%- endif -%}
+        {%- if page.next -%}
+            <li class="fork" style="float: right; list-style: none; display: inline"><a href="{{ page.next.url | relative_url }}" title="Next Post">{{ page.next.title }} ≫</a></li>
+        {%- endif -%}
       </section>
 
     </div>
