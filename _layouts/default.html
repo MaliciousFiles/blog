@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="follow_it-verification-code" content="M2NvuuKbBe7abfdNe8zg"/>
 
-{% seo %}
+    {% seo title=false %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
@@ -20,7 +20,7 @@
     <!--[if lt IE 8]>
     <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
     <![endif]-->
-    <title>{site.title}</title>
+    <title>{{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   </head>
