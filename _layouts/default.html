@@ -29,19 +29,23 @@
       <div id="header">
         <img src="{{ '/assets/images/CodingCloudLogo.png' | relative_url }}" style="float: left; padding-left: 6px" width="70px" height="70px">
         <nav>
-            <li class="fork" style="padding-right: 10px"><a href="{{ '/' | relative_url }}">Home</a></li>
-            <!-- <li class="fork">|●|</li> -->
-            <li class="fork" style="padding-right: 10px"><a href="{{ '/about' | relative_url }}">About</a></li>
-            <!-- <li class="fork">|●|</li> -->
-            <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
+            <ul>
+                <li class="fork" style="padding-right: 10px"><a href="{{ '/' | relative_url }}">Home</a></li>
+                <!-- <li class="fork">|●|</li> -->
+                <li class="fork" style="padding-right: 10px"><a href="{{ '/about' | relative_url }}">About</a></li>
+                <!-- <li class="fork">|●|</li> -->
+                <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
+            </ul>
         </nav>
         <nav style="float: right; margin-top: 0px">
-            {%- if page.previous -%}
-                <li class="fork"><a href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">≪ Previous Post</a></li>
-            {%- endif -%}
-            {%- if page.next -%}
-                <li class="fork" style="padding-left: 10px"><a href="{{ page.next.url | relative_url }}" title = "{{ page.next.title }}">Next Post ≫</a></li>
-            {%- endif -%}
+            <ul>
+                {%- if page.previous -%}
+                    <li class="fork"><a href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">≪ Previous Post</a></li>
+                {%- endif -%}
+                {%- if page.next -%}
+                    <li class="fork" style="padding-left: 10px"><a href="{{ page.next.url | relative_url }}" title = "{{ page.next.title }}">Next Post ≫</a></li>
+                {%- endif -%}
+            </ul>
         </nav>
       </div><!-- end header -->
 
