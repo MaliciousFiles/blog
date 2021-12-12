@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,21 +29,18 @@
       <div id="header">
         <img src="{{ '/assets/images/CodingCloudLogo.png' | relative_url }}" style="float: left; padding-left: 6px" width="70px" height="70px">
         <nav>
-            <li class="fork"><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li class="fork">|●|</li>
-            <li class="fork"><a href="{{ '/about' | relative_url }}">About</a></li>
-            <li class="fork">|●|</li>
+            <li class="fork" style="padding-right: 10px"><a href="{{ '/' | relative_url }}">Home</a></li>
+            <!-- <li class="fork">|●|</li> -->
+            <li class="fork" style="padding-right: 10px"><a href="{{ '/about' | relative_url }}">About</a></li>
+            <!-- <li class="fork">|●|</li> -->
             <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
         </nav>
         <nav style="float: right; margin-top: 0px">
             {%- if page.previous -%}
                 <li class="fork"><a href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">≪ Previous Post</a></li>
             {%- endif -%}
-            {%- if page.previous and page.next -%}
-                <li class="fork">|●|</li>
-            {%- endif -%}
             {%- if page.next -%}
-                <li class="fork"><a href="{{ page.next.url | relative_url }}" title = "{{ page.next.title }}">Next Post ≫</a></li>
+                <li class="fork" style="padding-left: 10px"><a href="{{ page.next.url | relative_url }}" title = "{{ page.next.title }}">Next Post ≫</a></li>
             {%- endif -%}
         </nav>
       </div><!-- end header -->
@@ -57,13 +55,6 @@
           <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
         </div>
         {{ content }}
-        <br>
-        {%- if page.previous -%}
-            <li class="fork" style="float: left; list-style: none; display: inline"><a href="{{ page.previous.url | relative_url }}" title="Previous Post">≪ {{ page.previous.title }}</a></li>
-        {%- endif -%}
-        {%- if page.next -%}
-            <li class="fork" style="float: right; list-style: none; display: inline"><a href="{{ page.next.url | relative_url }}" title="Next Post">{{ page.next.title }} ≫</a></li>
-        {%- endif -%}
       </section>
 
     </div>
@@ -79,110 +70,5 @@
       </script>
     {% endif %}
     </body>
-    <!--<footer>
-        <div class="newsletter-container">
-           <h4 class="newsletter-title">Subscribe</h4>
-           <form class="newsletter-form" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="var win=window.open('https://feedburner.google.com/fb/a/mailverify?uri=MaliciousFiles', 'popupwindow', 'scrollbars=yes,width=550,height=520');var timer=setInterval(function(){if (win.closed){clearInterval(timer);document.getElementsByClassName('newsletter-email')[0].value='';}},1000);return true">
-
-               <p class="newsletter-text">Get new posts directly to your inbox</p>
-
-               <input type="hidden" value="MaliciousFiles" name="uri" />
-
-               <input type="hidden" name="loc" value="en_US" />
-
-               <input class="newsletter-email" type="text" name="email" placeholder="name@example.com" />
-
-               <input class="newsletter-submit" type="submit" value="Subscribe" />
-
-           </form>
-       </div>
-   </footer>-->
-   <style>@import url('https://fonts.googleapis.com/css?family=Montserrat:700');@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  padding: clamp(17px, 5%, 40px) clamp(17px, 7%, 50px) !important;
-  max-width: 350px !important;
-  border-radius: 6px !important;
-  box-shadow: 0 5px 25px rgba(34, 60, 47, 0.25) !important;
-  margin: 0 auto 2em;
-}
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview,
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview *{
-  box-sizing: border-box !important;
-}
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-heading {
-  width: 100% !important;
-}
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-heading h5{
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field {
-  margin-top: 20px !important;
-  width: 100% !important;
-}
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input {
-  width: 100% !important;
-  height: 40px !important;
-  border-radius: 6px !important;
-  border: 2px solid #e9e8e8 !important;
-  background-color: #fff !important;
-  outline: none !important;
-}
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input {
-  color: #888888 !important;
-  font-family: "Montserrat" !important;
-  font-size: 14px !important;
-  font-weight: 400 !important;
-  line-height: 20px !important;
-  text-align: center !important;
-}
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input::placeholder {
-  color: #888888 !important;
-  opacity: 1 !important;
-}
-
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input:-ms-input-placeholder {
-  color: #888888 !important;
-}
-
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input::-ms-input-placeholder {
-  color: #888888 !important;
-}
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button {
-  margin-top: 10px !important;
-  width: 100% !important;
-}
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button {
-  width: 100% !important;
-  height: 40px !important;
-  border: 0 !important;
-  border-radius: 6px !important;
-  line-height: 0px !important;
-}
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button:hover {
-  cursor: pointer !important;
-}
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .powered-by-line {
-  color: #231f20 !important;
-  font-family: "Montserrat" !important;
-  font-size: 13px !important;
-  font-weight: 400 !important;
-  line-height: 25px !important;
-  text-align: center !important;
-  text-decoration: none !important;
-  display: flex !important;
-  width: 100% !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin-top: 10px !important;
-}
-.followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .powered-by-line img {
-  margin-left: 10px !important;
-  height: 1.13em !important;
-  max-height: 1.13em !important;
-}
-</style><div class="followit--follow-form-container" attr-a attr-b attr-c attr-d attr-e attr-f><form data-v-390679af="" action="https://api.follow.it/subscription-form/U28yUkZaN0ZQczNzWDVwRjhmSWw5blpCcGdJU2JKdzA3U1ZOWXVZUVVmWmdrdkoySm15aHgwRldXeTlMZ080blZjRi94Q1BVOU9kWVBVRnpvUkQ1Um9FS3J4eWRSMHZaZVlka1NoY0NsVFFVeVJxeG1NOEMzb2hMdFNUMytXR098UTE1RzBGb202ZUZqSlBSY1hETUt5YU5hVHN0TDhueUwvcWVWajRQN1Y5bz0=/8" method="post"><div data-v-390679af="" class="form-preview" style="background-color: rgb(68, 68, 68); position: static;"><div data-v-390679af="" class="preview-heading"><h5 data-v-390679af="" style="text-transform: none !important; font-family: Montserrat; font-weight: bold; color: rgb(221, 221, 221); font-size: 16px; text-align: center;">Get new posts directly to your inbox</h5></div> <div data-v-390679af="" class="preview-input-field"><input data-v-390679af="" type="email" name="email" required="required" placeholder="Enter your email" spellcheck="false" style="text-transform: none !important; font-family: Montserrat; font-weight: normal; color: rgb(136, 136, 136); font-size: 14px; text-align: center; background-color: rgb(245, 245, 245);"></div> <div data-v-390679af="" class="preview-submit-button"><button data-v-390679af="" type="submit" style="text-transform: none !important; font-family: Montserrat; font-weight: bold; color: rgb(255, 255, 255); font-size: 16px; text-align: center; background-color: rgb(0, 0, 0);">Subscribe</button></div></div></form></div>
+   <div class="followit--follow-form-container" attr-a attr-b attr-c attr-d attr-e attr-f><form data-v-390679af="" action="https://api.follow.it/subscription-form/U28yUkZaN0ZQczNzWDVwRjhmSWw5blpCcGdJU2JKdzA3U1ZOWXVZUVVmWmdrdkoySm15aHgwRldXeTlMZ080blZjRi94Q1BVOU9kWVBVRnpvUkQ1Um9FS3J4eWRSMHZaZVlka1NoY0NsVFFVeVJxeG1NOEMzb2hMdFNUMytXR098UTE1RzBGb202ZUZqSlBSY1hETUt5YU5hVHN0TDhueUwvcWVWajRQN1Y5bz0=/8" method="post"><div data-v-390679af="" class="form-preview" style="background-color: rgb(68, 68, 68); position: static;"><div data-v-390679af="" class="preview-heading"><h5 data-v-390679af="" style="text-transform: none !important; font-family: Montserrat; font-weight: bold; color: rgb(221, 221, 221); font-size: 16px; text-align: center;">Get new posts directly to your inbox</h5></div> <div data-v-390679af="" class="preview-input-field"><input data-v-390679af="" type="email" name="email" required="required" placeholder="Enter your email" spellcheck="false" style="text-transform: none !important; font-family: Montserrat; font-weight: normal; color: rgb(136, 136, 136); font-size: 14px; text-align: center; background-color: rgb(245, 245, 245);"></div> <div data-v-390679af="" class="preview-submit-button"><button data-v-390679af="" type="submit" style="text-transform: none !important; font-family: Montserrat; font-weight: bold; color: rgb(255, 255, 255); font-size: 16px; text-align: center; background-color: rgb(0, 0, 0);">Subscribe</button></div></div></form></div>
 </html>

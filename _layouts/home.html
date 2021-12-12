@@ -9,6 +9,80 @@ layout: default
 
   {{ content }}
 
+  <script>
+    function addFilter() {
+        var filterText = document.getElementById("filter").value;
+
+        document.getElementById("filter").value = "";
+
+        if (filterText == "") return false;
+
+        for (var filter of document.getElementsByTagName("filter")) {
+            if (filter.getElementsByTagName("span")[0].innerText == filterText) {
+                return false;
+            }
+        }
+
+        var filters = document.getElementById("filters");
+
+        var filter = document.createElement("filter");
+        filter.style = "display: flex; justify-content: space-between;";
+        var text = document.createElement("span");
+        text.innerHTML = filterText;
+        var close = document.createElement("button");
+        close.innerHTML = "×";
+        close.addEventListener("click", function() {
+            filter.remove();
+
+            if (filters.childElementCount == 0) {
+                filters.previousSibling.remove();
+                filters.previousSibling.remove();
+                filters.previousSibling.remove();
+            }
+
+            reloadPosts();
+        });
+
+        filter.appendChild(text);
+        filter.appendChild(close);
+        if (filters.childElementCount == 0) {
+            filters.parentNode.insertBefore(document.createElement("br"), filters);
+            filters.parentNode.insertBefore(document.createElement("br"), filters);
+            filters.parentNode.insertBefore(document.createElement("br"), filters);
+        }
+        filters.appendChild(document.createTextNode(" "));
+        filters.appendChild(filter);
+
+        reloadPosts();
+
+        return false;
+    }
+
+    function reloadPosts() {
+        for (var post of document.getElementsByClassName("post")) {
+            post.hidden = false;
+
+            for (var filter of document.getElementsByTagName("filter")) {
+                if (!post.classList.contains(filter.getElementsByTagName("span")[0].innerText)) {
+                    post.hidden = true;
+                }
+            }
+        }
+    }
+  </script>
+
+  <datalist id="categories">
+      {% for category in site.categories %}
+          <option value="{{ category | first }}">
+      {% endfor %}
+  </datalist>
+  <form onsubmit="return addFilter();" style="float: right;">
+      <input list="categories" id="filter" type="text" placeholder="Category...">
+      <input type="submit" value="Filter">
+  </form>
+  <div id="filters" style="float: right; display: flex;"></div>
+
+  <br><br><br>
 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
@@ -24,29 +98,38 @@ layout: default
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          {% if post.categories.size > 0 %}
-            {% for category in post.categories %}
-                {% if category == post.categories[0] %}
-                    {% capture category_string %} | {{ category }}{% endcapture %}
-                {% else %}
-                    {% capture category_string %}{{ category_string }} | {{ category }}{% endcapture %}
-                {% endif %}
-            {% endfor %}
-          {% endif %}
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}{{ category_string }}
-          </a>
-          {% assign category_string = "" %}
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+      <li class='post {{ post.categories | join: " "}}'>
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          {% for category in post.categories %}
+            {% if category == post.categories[0] %}
+                 |
+            {% else %}
+                ,
+            {% endif %}
+            <a class="category" title="Add filter" href="#" onclick="document.getElementById('filter').value = '{{ category }}'; return addFilter();">{{ category }}</a>
+          {% endfor %}
+          <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                  {{ post.title | escape }}
+              </a>
+              {% assign category_string = "" %}
+          </h3>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+            {%- endif -%}
       </li>
       {%- endfor -%}
     </ul>
+
+    <!-- <script>
+        if (new URLSearchParams(window.location.search).has("categories")) {
+            for (var element of document.getElementsByClassName("post")) {
+                if (new URLSearchParams(window.location.search).get("categories").split(" ").filter(value => element.classList.contains(value)).length == 0) {
+                    element.hidden = true;
+                }
+            }
+        }
+    </script> -->
 
     {% if site.paginate %}
       <div class="pager">

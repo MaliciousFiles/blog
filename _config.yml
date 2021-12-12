@@ -23,11 +23,12 @@ email: mtroalson@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A blog that I will write in weekly to document my projects.
   I'll post updates about projects, or just anything of note in my programming.
-  Subscribe if you enjoy, and want to be notified of new posts! ^_^
+  Subscribe if you enjoy and want to be notified of new posts! ^_^
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://malcolmbroalson.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: MaliciousFiles
 github_username:  MaliciousFiles
+permalink: :categories/:year-:month-:day-:slug
 
 # Build settings
 theme: jekyll-theme-midnight

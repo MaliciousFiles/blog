@@ -8,7 +8,7 @@ layout: default
     <p class="post-meta">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }}
+        {{ page.date | date: date_format }} | {{ page.categories | join: ', ' }}
       </time>
       {%- if page.modified_date -%}
         ~
@@ -29,6 +29,29 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  <button id="scrollup"><i class="fa fa-angle-up" style="font-size: 20px"></i></button>
+
+  <script>
+    var scrollup = document.getElementById("scrollup");
+    scrollup.onclick = function() {window.scrollTo({top: 0, behavior: 'smooth'});};
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollup.style.display = "block";
+        } else {
+            scrollup.style.display = "none";
+        }
+    }
+  </script>
+
+  <br>
+  {%- if page.previous -%}
+      <li class="fork" style="float: left; list-style: none; display: inline"><a href="{{ page.previous.url | relative_url }}" title="Previous Post">≪ {{ page.previous.title }}</a></li>
+  {%- endif -%}
+  {%- if page.next -%}
+      <li class="fork" style="float: right; list-style: none; display: inline"><a href="{{ page.next.url | relative_url }}" title="Next Post">{{ page.next.title }} ≫</a></li>
+  {%- endif -%}
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
