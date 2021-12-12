@@ -8,7 +8,10 @@ layout: default
     <p class="post-meta">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }} | {{ page.categories | join: ', ' }}
+        {{ page.date | date: date_format }}
+        {% if page.categories.size > 0 %}
+             | {{ page.categories | join: ', ' }}
+        {% endif %}
       </time>
       {%- if page.modified_date -%}
         ~
