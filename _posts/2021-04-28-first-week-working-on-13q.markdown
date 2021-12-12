@@ -2,7 +2,7 @@
 layout: post
 title: "First Week Working On 13Q"
 date: "2021-04-28 07:56:52 -0500"
-categories: "13Q Java Minecraft"
+categories: "13Q Minecraft"
 ---
 
 Over the past week, I have been working closely with my friend to start my developing journey on 13Q! So far, I did a custom explosion where it got the blocks being exploded, then generated sprites of them midair so you can see them falling down. That was just a warmup, and over the past 3 days I have created working NPCs, where you can right and left click them to activate them, a working custom bossbar using a hidden wither, and a region manager that can tell you what "region" you're in on your scoreboard.

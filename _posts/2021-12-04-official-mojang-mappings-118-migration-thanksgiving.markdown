@@ -2,7 +2,7 @@
 layout: post
 title: "Official Mojang Mappings, 1.18 Migration, Thanksgiving"
 date: "2021-12-04 20:50:42 -0600"
-categories: "ReLife Minecraft Maven"
+categories: "ReLife Minecraft"
 ---
 
 &emsp;&emsp;Alright. So. Yes, it has in fact been, *\*gasp\**, TWO WEEKS, since I've posted!! I know, I know, it's truly terrible. But I'm here now! Anyway, as usual I'll begin by explaining the title. To start with, Thanksgiving - I got a **ton** done over Thanksgiving break. I honestly don't remember everything that I did off the top of my head, so as I'm writing this I'll be scrolling through my Notion ToDo list page to remind me. By the way, if you're ever working on a project and feeling like, this just isn't organized enough and I'm going to forget all these great ideas I'm coming up with, just download a great note taking app like Notion and write it down. Trust me, it'll make everything easier. Anyway, second part is 1.18! Yes, it finally released and it is amazing. If you haven't checked it out, I fully recommend it, although I gotta say - it is way more laggy. Hopefully they'll fix that in one of the minor updates. Anyway, I had to go and download the new Spigot version. I won't get into how that turned into using Maven, but you'll hear about that later - the final part of the title. Onwards!

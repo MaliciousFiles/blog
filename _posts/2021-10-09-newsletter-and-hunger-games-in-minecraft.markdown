@@ -2,7 +2,7 @@
 layout: post
 title: "Newsletter & Hunger Games in Minecraft"
 date: "2021-10-09 13:48:26 -0500"
-categories: "Newsletter Minecraft"
+categories: "Website Minecraft"
 ---
 
 Well it's Saturday and here I am as promised! Now first things first, you've probably seen the title but here's a little tangent: newsletter! I bet you've seen it on the home page, but if you scroll down to the bottom you should be able to sign up to a newsletter to receive emails any time I post. I just set it up this morning, so I have no idea if it works but I've signed up myself so we'll see. In case you're curious I'm using Feed Burner by Google which can scan your page's `feed.xml` file (if you want to see mine its at [https://maliciousfiles.github.io/blog/feed.xml]{:target="_blank"}). It provides you with some nifty HTML to put into your website, I added a little CSS and JavaScript to make it fancy, and it handles the rest! Theoretically any time I add a new post, thereby adding a new page, thereby updating the feed.xml, thereby alerting Feed Burner, it should send out an email!
