@@ -96,8 +96,8 @@ filter button { background-color: transparent; border: none; padding-right: 0; p
 filter span { padding-right: 10px; }
 .category { cursor: pointer;  color: #ffe98f; }
 
-input[type="submit"] { color: white; border: 1px solid #5d910b; background: linear_gradient(#93bd20, #659e10); border-radius: 2px; box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7); background-color: #93bd20; padding: 10px 12px; margin-top: 6px; line-height: 14px; font-size: 14px; display: inline-block; text-align: center; }
-input[type="submit"]:hover { background: linear_gradient(#749619, #527f0e); background-color: #659e10; border: 1px solid #527f0e; box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0); }
+input[type="submit"] { color:white;border:1px solid #5d910b;background:linear-gradient(#93bd20, #659e10);border-radius:2px;box-shadow:inset 0px 1px 0px rgba(255,255,255,0.3),0px 3px 7px rgba(0,0,0,0.7);background-color:#93bd20;padding:10px 12px;margin-top:6px;line-height:14px;font-size:14px;display:inline-block;text-align:center; }
+input[type="submit"]:hover { background:linear-gradient(#749619, #527f0e);background-color:#659e10;border:1px solid #527f0e;box-shadow:inset 0px 1px 1px rgba(0,0,0,0.2),0px 1px 0px transparent; }
 
 section #title { margin-bottom: 10px; }
 
