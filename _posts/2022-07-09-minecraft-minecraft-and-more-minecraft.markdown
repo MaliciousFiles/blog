@@ -123,6 +123,6 @@ categories: "ReLife Minecraft Discord Exaroton"
 <p class="paragraph" markdown="1">That's all for today! I know this post is reaaaally long, so thank you if you stayed till the end. I had a hard time finding motivation to write a post for a couple weeks, and before that was on vacation, so it's been a bit, but hopefully it at least won't be quite a month till the next one. Also, I didn't mention this last time, but my blog officially turned 1 while I was on my 5 month blogging hiatus! Big thank you to anyone who has read it this whole time, the purpose for writing this is to document my work, so I can look back on it in the future, but it's the people who read it that make it fun. Over the past year, when I've taken breaks, a few people have asked where the post was when it didn't come on schedule, and that's why I like this, I like writing for people who enjoy it. That being said, thsi is me signing off, so see you all next post.</p>
 
 [off]: /assets/images/zherral_tracker/off.png
-[pingign]: /assets/images/zherral_tracker/pinging.gif
+[pinging]: /assets/images/zherral_tracker/pinging.gif
 [static]: /assets/images/zherral_tracker/static.gif
 [tracking]: /assets/images/zherral_tracker/tracking.gif
