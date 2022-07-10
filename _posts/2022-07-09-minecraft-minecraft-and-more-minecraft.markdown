@@ -64,7 +64,7 @@ categories: "ReLife Minecraft Discord Exaroton"
 <h3 class="subheading">Zherral Tracker</h3>
 <p class="paragraph" markdown="1">That's right, the subheading is back for one more! So to figure this out, we all got in a discord call and decided on how this would work. So, by the time we were done, the item was a compass, and these were the requirements for me to code:</p
 
-<ul>
+<ul class="dashed">
     <li>There is a different recipe for a tracker for each superitem, very similar, but with one item keyed to which item it tracks (i.e. it takes a stick for the Staff, shield for the Bane, etc.)</li>
     <li>When you right click with it, it tells you whether the item is in storage (such as a chest), dropped (as a physical item on the ground), or if it is on a player, it tells you which player is holding it, but it costs some levels to make that check</li>
     <li>When you right click *while crouching*, if it is in storage or dropped (notably, **not** if a player has it), the compass will point towards the location of the item</li>

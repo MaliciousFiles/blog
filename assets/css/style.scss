@@ -137,5 +137,5 @@ section #title { margin-bottom: 10px; }
 .alert { background-color: #697e76; padding-right: 2%; padding-left: 1.5%; padding-top: 1%; padding-bottom: 1.25%; border-radius: 10px; color: #cacf9e; }
 .alert b { font-size: 17px; color: #eba55b; }
 
-ul { list-style-type: none; }
-ul li:before { content: '\2014'; position: absolute; margin-left: -20px; }
+ul .dashed { list-style-type: none; }
+ul .dashed li:before { content: '\2014'; position: absolute; margin-left: -20px; }
