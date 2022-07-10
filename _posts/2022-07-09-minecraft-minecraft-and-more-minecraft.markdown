@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Minecraft, Minecraft, and More Minecraft"
+title: "Minecraft, Minecraft, and More Minecraft!"
 date: "2022-07-09 09:36:33 -0500"
 categories: "ReLife Minecraft Discord Exaroton"
 ---
