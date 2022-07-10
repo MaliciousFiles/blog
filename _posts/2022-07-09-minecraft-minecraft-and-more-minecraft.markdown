@@ -12,15 +12,15 @@ categories: "ReLife Minecraft Discord Exaroton"
 <p class="paragraph" markdown="1">The goal was for it to be a fairly simple plugin: just add 5 unique superitems. Being superitems, only one instance will exist at a time, and only one person can have each superitem. Of course, since a plugin is serverside only, I can't just add new items. Neither solely serverside, nor solely clientside mods can add items, because the item has to be registered on both sides for them to know what to do with it.</p>
 <p class="paragraph" markdown="1">There is another option of course: overwrite an existing one. Now I don't mean something like make every stick people create super powerful. What you can do, however, is add a tag to the item to identify it as one of your items. Essentially, for each of the 5 superitems, I instantiate a new item with a material (i.e. stick), and then in the instantiation method give it a custom tag for identification later.</p>
 <p class="paragraph" markdown="1">By now I should probably mention what the superitems actually are:
-<br>
+<br><br>
 **Staff of Eternal Flame**: a stick that you can right click to set the entity you're looking at on fire, or use as flint and steel (right click to set the block you're looking at on fire), and finally, it has the combat stats of a diamond sword, and when you attack an entity it will set them on fire and give them the poison and nausea effects.
-<br>
+<br><br>
 **Bane of the Mighty**: a shield that while in use (in Minecraft you hold right click to hold up a shield) reflects projectiles back at the shooter and reflect the damage of melee attacks, so long as the projectile/attack actually hit the shield (shields don't protect your whole body, just the direction you're looking). It also has the combat stats of a diamond sword.
-<br>
+<br><br>
 **Heaven's Wrath**: a trident with the *Loyalty* enchantment (when thrown, it will return to its owner of its own accord), and when thrown, if it hits an entity, it will strike that entity with lightning, and if that entity is a player, it will make that player toss out the item they're holding.
-<br>
+<br><br>
 **Helm of Boundless Vigor**: a golden helmet with the *Protection IV* enchantment, that while worn will give you 10 extra health (5 extra hearts, your normal max health is 20, or 10 hearts), as well as slightly increasing your movement speed and attack strength, whilst also being invisible to other players when worn.
-<br>
+<br><br>
 **The Black Rain**: a crossbow that you can simply hold down right click to fire extremely fast, and has the *Multishot II* enchantment which makes it shoot 5 projectiles at a time (in vanilla Minecraft, there is not a second level of *Multishot*, and it makes the crossbow shoot 3 projectiles rather than the usual 1)</p>
 
 <p class="paragraph" markdown="1">Ok, there. Not only did I have to add those five items, but I had to implement them quickly because the SMP was planned to start just days after my family got back in town, and I couldn't work on it beforehand. Here goes!</p>
