@@ -138,4 +138,4 @@ section #title { margin-bottom: 10px; }
 .alert b { font-size: 17px; color: #eba55b; }
 
 ul.dashed { list-style-type: none; list-style-image: none; }
-ul.dashed li:before { content: '\2014'; position: absolute; margin-left: -20px; }
+ul.dashed li:before { content: '-'; position: absolute; margin-left: -20px; }
