@@ -83,7 +83,7 @@ categories: "ReLife Minecraft Discord Exaroton"
 <p class="paragraph" markdown="1">Alright, easiest part done, woo hoo! Now for the difficult stuff. And I mean difficult, I spent many a late night fixing bugs that players would probably never even find under normal circumstances.</p>
 <p class="paragraph" markdown="1">I'll start by talking about the two different activation methods: right clicking, and sneak + right clicking. The simpler one is just right clicking, because that just has to immediately tell you something. The main thing to decide there is how I want to give the player the information. To get the information I just have to consult the map I created earlier, then decide whether to say it's in storage, dropped, or which player has it.</p>
 <p class="paragraph" markdown="1">The options for information medium is fairly limited, however:</p>
-<img src="/assets/images/minecraft_text_options.png">
+<img src="/assets/images/posts/minecraft_text_options.png">
 <p class="paragraph" markdown="1">Title, subtitle, and bossbar are too flashy, but I'll be using bossbar later, and text feels unprofesional, crude. So, actionbar it was. I made a simple util method to send the right packets, and tehre we go. Works! Well.. for now, we'll be coming back to pinging (right click activation) later.</p>
 <p class="paragraph" markdown="1">Now the tracking option (sneak + right click) is a bit more difficult, for a few reasons. Initial activation isn't too hard, it just makes sure you have enough levels (you need at minimum 30 to start it tracking), and then drains your levels to a predetermined number (10 levels). Of course, I want it to be able to stay active across server restarts, so I stored it in what's called "persistent data", which essentially is a purely Bukkit API that adds it to NBT.</p>
 <p class="paragraph" markdown="1">So, it stores the game time (ticks since game creation) to be used in calculations later, and the number of levels that were put into it. Now, just like a lot of things I've talked about today, I started by doing it one way, then changed to doing it a better way. Initially I was storing an `ItemStack` object, but that didn't work for some technical reasons I won't get into.</p>
@@ -122,7 +122,7 @@ categories: "ReLife Minecraft Discord Exaroton"
 <h2 class="heading">Wrapup</h2>
 <p class="paragraph" markdown="1">That's all for today! I know this post is reaaaally long, so thank you if you stayed till the end. I had a hard time finding motivation to write a post for a couple weeks, and before that was on vacation, so it's been a bit, but hopefully it at least won't be quite a month till the next one. Also, I didn't mention this last time, but my blog officially turned 1 while I was on my 5 month blogging hiatus! Big thank you to anyone who has read it this whole time, the purpose for writing this is to document my work, so I can look back on it in the future, but it's the people who read it that make it fun. Over the past year, when I've taken breaks, a few people have asked where the post was when it didn't come on schedule, and that's why I like this, I like writing for people who enjoy it. That being said, this is me signing off, so see you all next post.</p>
 
-[off]: /assets/images/zherral_tracker/off.png
-[pinging]: /assets/images/zherral_tracker/pinging.gif
-[static]: /assets/images/zherral_tracker/static.gif
-[tracking]: /assets/images/zherral_tracker/tracking.gif
+[off]: /assets/images/posts/zherral_tracker/off.png
+[pinging]: /assets/images/posts/zherral_tracker/pinging.gif
+[static]: /assets/images/posts/zherral_tracker/static.gif
+[tracking]: /assets/images/posts/zherral_tracker/tracking.gif
