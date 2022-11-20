@@ -1,0 +1,8 @@
+{% if site.paginate %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+<script>
+window.location.replace("{{ posts[0].url | relative_url }}")
+</script>
