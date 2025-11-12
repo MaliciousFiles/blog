@@ -2,9 +2,12 @@
 layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+      <div id="side-email" style="position: fixed; right: 20px; width: 15rem">
+          <div class="followit--follow-form-container" attr-a attr-b attr-c attr-d attr-e attr-f><form data-v-390679af="" action="https://api.follow.it/subscription-form/U28yUkZaN0ZQczNzWDVwRjhmSWw5blpCcGdJU2JKdzA3U1ZOWXVZUVVmWmdrdkoySm15aHgwRldXeTlMZ080blZjRi94Q1BVOU9kWVBVRnpvUkQ1Um9FS3J4eWRSMHZaZVlka1NoY0NsVFFVeVJxeG1NOEMzb2hMdFNUMytXR098UTE1RzBGb202ZUZqSlBSY1hETUt5YU5hVHN0TDhueUwvcWVWajRQN1Y5bz0=/8" method="post"><div data-v-390679af="" class="form-preview" style="background-color: rgb(68, 68, 68); position: static;"><div data-v-390679af="" class="preview-heading"><h5 data-v-390679af="" style="text-transform: none !important; font-family: Montserrat; font-weight: bold; color: rgb(221, 221, 221); font-size: 16px; text-align: center;">Get new posts directly to your inbox</h5></div> <div data-v-390679af="" class="preview-input-field"><input data-v-390679af="" type="email" name="email" required="required" placeholder="Enter your email" spellcheck="false" style="text-transform: none !important; font-family: Montserrat; font-weight: normal; color: rgb(136, 136, 136); font-size: 14px; text-align: center; background-color: rgb(245, 245, 245);"></div> <div data-v-390679af="" class="preview-submit-button"><button data-v-390679af="" type="submit" style="text-transform: none !important; font-family: Montserrat; font-weight: bold; color: rgb(255, 255, 255); font-size: 16px; text-align: center; background-color: rgb(0, 0, 0);">Subscribe</button></div></div></form></div>
+      </div>
+
+      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -29,14 +32,20 @@ layout: default
       {%- endif -%}</p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+    <div id="toc-container">
+        {{ content | toc_only | regex_replace: '\(.*\)', '' }}
+    </div>
+
+
+    <div class="post-content e-content" itemprop="articleBody">
+    {{ content | inject_anchors }}
   </div>
 
   <button id="scrollup"><i class="fa fa-angle-up" style="font-size: 20px"></i></button>
 
   <script>
     var scrollup = document.getElementById("scrollup");
+    var sideEmail = document.getElementById("side-email");
     scrollup.onclick = function() {window.scrollTo({top: 0, behavior: 'smooth'});};
 
     window.onscroll = function() {
@@ -45,7 +54,18 @@ layout: default
         } else {
             scrollup.style.display = "none";
         }
+
+        if (document.body.scrollHeight - document.body.scrollTop - window.innerHeight < 200 || document.documentElement.scrollHeight - document.documentElement.scrollTop - window.innerHeight < 200) {
+            sideEmail.style.opacity = '0';
+        } else {
+            sideEmail.style.opacity = '1';
+        }
     }
+    window.addEventListener('hashchange', () => {
+        console.log(window.location.hash.substring(1));
+        console.log(document.getElementById(window.location.hash.substring(1)));
+        window.scrollBy({top: document.querySelector(`.anchor[href='${window.location.hash}']`)?.getBoundingClientRect().top - 80, behavior: 'smooth'})
+    });
   </script>
 
   <br>

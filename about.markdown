@@ -3,8 +3,12 @@ layout: default
 title: About
 ---
 
-My name is Monsaeiour Malcolmb Roalson, and I am writing this blog to keep track of my projects. If you have any questions about coding or otherwise, feel free to email me at [mtroalson@gmail.com] or DM me on Discord at [MaliciousFiles#7344]. If you want to see my project source code you can check me out on [my GitHub].
+My name is Malcolm Roalson, though perhaps that's evident from the URL. I try to use this blog to keep track of my projects, though I make no promises. I love talking about coding (among many other subjects), and will always be happy to chat.
 
-[mtroalson@gmail.com]: mailto:mtroalson@gmail.com
+I'm passionate about building tools to solve problems, and strongly believe that it is our duty to not just accept problems and move on, but do everything we can to solve them. I try to do my part in our digital world.
+
+Feel free to email me at [blog@malcolmroalson.com] or DM me on Discord at [maliciousfiles]. If you want to see my project source code, you can check out [my GitHub].
+
+[blog@malcolmroalson.com]: mailto:blog@malcolmroalson.com
 [my GitHub]: https://github.com/MaliciousFiles
-[MaliciousFiles#7344]: https://discord.com/app
+[maliciousfiles]: https://discord.com/app

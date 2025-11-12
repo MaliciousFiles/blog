@@ -94,7 +94,8 @@ max-height: 1.13em !important;
 input[type="text"], filter { border: 1px solid; border-radius: 2px; box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7); padding: 10px 12px; line-height: 14px; font-size: 14px; display: inline-block; text-align: center; margin-left: 10px; }
 filter button { background-color: transparent; border: none; padding-right: 0; padding-left: 0; color: #f0e7d5; font-size: 14px; }
 filter span { padding-right: 10px; }
-.category { cursor: pointer;  color: #ffe98f; }
+.category { cursor: pointer;  color: #d6eaa5; }
+.category:hover {  color: #e5efcb; }
 
 input[type="submit"] { color:white;border:1px solid #5d910b;background:linear-gradient(#93bd20, #659e10);border-radius:2px;box-shadow:inset 0px 1px 0px rgba(255,255,255,0.3),0px 3px 7px rgba(0,0,0,0.7);background-color:#93bd20;padding:10px 12px;margin-top:6px;line-height:14px;font-size:14px;display:inline-block;text-align:center; }
 input[type="submit"]:hover { background:linear-gradient(#749619, #527f0e);background-color:#659e10;border:1px solid #527f0e;box-shadow:inset 0px 1px 1px rgba(0,0,0,0.2),0px 1px 0px transparent; }
@@ -132,6 +133,14 @@ section #title { margin-bottom: 10px; }
   100% {opacity:1;}
 }
 
+a {
+  color: #ffe98f;
+}
+
+a:hover {
+  color: #fdefb3;
+}
+
 #scrollup:hover { background: linear_gradient(#749619, #527f0e); background-color: #659e10; border: 1px solid #527f0e; box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0); }
 
 .alert { background-color: #697e76; padding-right: 2%; padding-left: 1.5%; padding-top: 1%; padding-bottom: 1.25%; border-radius: 10px; color: #cacf9e; }
@@ -139,3 +148,35 @@ section #title { margin-bottom: 10px; }
 
 ul.dashed { list-style-type: none; list-style-image: none; }
 ul.dashed li:before { content: '-'; position: absolute; margin-left: -20px; }
+
+.paragraph {
+  font-size: 14.5px;
+}
+
+#toc { padding: 0; }
+#toc,#toc ul { list-style: none; }
+#toc ul { margin-bottom: 0; }
+#toc li:before { content: '— '; color: #e8e8e8; }
+#toc a { color: #d7cfbe; }
+.toc-h2 { font-size: 18px; padding-top: 15px; }
+.toc-h3 { font-size: 15px; }
+
+@media(min-width: 1200px) {
+  #toc-container {
+    position: fixed;
+    top: 0;
+    left: 25px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+@media(max-width: 1199px) {
+  #side-email {
+    display: none;
+  }
+}
+
+#side-email {
+  transition: opacity 0.15s linear;
+}
