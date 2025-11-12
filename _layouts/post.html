@@ -33,19 +33,20 @@ layout: default
   </header>
 
     <div id="toc-container">
-        {{ content | toc_only | regex_replace: '\(.*\)', '' }}
+        {% include toc.html html=content id='toc' sanitize=true h_min=2 h_max=3 item_class='toc-h%level%' %}
+<!--        {{ content | toc_only | regex_replace: '\(.*\)', '' }}-->
     </div>
 
 
     <div class="post-content e-content" itemprop="articleBody">
-    {{ content | inject_anchors }}
+    {{ content }}
   </div>
 
   <button id="scrollup"><i class="fa fa-angle-up" style="font-size: 20px"></i></button>
 
   <script>
-    var scrollup = document.getElementById("scrollup");
-    var sideEmail = document.getElementById("side-email");
+    let scrollup = document.getElementById("scrollup");
+    let sideEmail = document.getElementById("side-email");
     scrollup.onclick = function() {window.scrollTo({top: 0, behavior: 'smooth'});};
 
     window.onscroll = function() {
@@ -61,10 +62,11 @@ layout: default
             sideEmail.style.opacity = '1';
         }
     }
+
+    let article = document.getElementsByTagName('article')[0];
     window.addEventListener('hashchange', () => {
-        console.log(window.location.hash.substring(1));
-        console.log(document.getElementById(window.location.hash.substring(1)));
-        window.scrollBy({top: document.querySelector(`.anchor[href='${window.location.hash}']`)?.getBoundingClientRect().top - 80, behavior: 'smooth'})
+        window.scrollBy({top: (document.getElementById(window.location.hash.substring(1))
+            ?? article.querySelectorAll('h2, h3')[parseInt(window.location.hash.substring(1))])?.getBoundingClientRect().top - 80, behavior: 'smooth'})
     });
   </script>
 

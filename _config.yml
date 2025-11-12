@@ -34,8 +34,6 @@ permalink: :categories/:year-:month-:day-:slug
 theme: jekyll-theme-midnight
 plugins:
   - jekyll-feed
-  - jekyll-toc
-  - jekyll-regex-replace
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -56,12 +54,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-toc:
-  min_level: 2
-  max_level: 3
 
-defaults:
-  - scope:
-      path: ""
-    values:
-      toc: true
+markdown: kramdown
