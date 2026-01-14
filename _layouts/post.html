@@ -64,10 +64,13 @@ layout: default
     }
 
     let article = document.getElementsByTagName('article')[0];
-    window.addEventListener('hashchange', () => {
-        window.scrollBy({top: (document.getElementById(window.location.hash.substring(1))
-            ?? article.querySelectorAll('h2, h3')[parseInt(window.location.hash.substring(1))])?.getBoundingClientRect().top - 80, behavior: 'smooth'})
-    });
+    let hashChange = () => {
+      if (isNaN(parseInt(window.location.hash.substring(1)))) return;
+      window.scrollBy({top: (document.getElementById(window.location.hash.substring(1))
+                ?? article.querySelectorAll('h2, h3')[parseInt(window.location.hash.substring(1))])?.getBoundingClientRect().top - 80, behavior: 'smooth'})
+    }
+    window.addEventListener('hashchange', hashChange);
+    window.onload = hashChange;
   </script>
 
   <br>
